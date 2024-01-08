@@ -3,10 +3,10 @@ import { Link, NavLink } from "react-router-dom";
 import Logo from '/logo.svg';
 
 function Nav() {
-  return     <Navbar>
+  return     <Navbar className="bg-base-100 mb-32 shadow-xl rounded-box">
               <div className="flex-1">
                 <Link to="/">
-                  <img src={Logo} alt="Logo" />;
+                  <img src={Logo} className="logo" alt="Logo" />;
                 </Link>
               </div>
               <div className="flex-none">

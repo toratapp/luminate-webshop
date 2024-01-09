@@ -1,5 +1,11 @@
+import FirstHeading from "../common/FirstHeading";
+import SecondHeading from "../HomePageContent/SecondHeading";
+
 function HomePage() {
-  return <h1 className="text-3xl font-bold underline">Home page</h1>;
+  return  <>
+            <FirstHeading>Welcome to our webshop</FirstHeading>
+            <SecondHeading />
+          </>;
 }
 
 export default HomePage;

@@ -2,12 +2,12 @@
 height: 42px;
 }
 
-.product__reviews {
+.product__reviews, .home__product-cards, .contact__main {
   margin-bottom: 600px;
 }
 
 @media (min-width: 768px) {
-  .product__reviews {
+  .product__reviews, .home__product-cards, .contact__main {
     margin-bottom: 240px;
   }
 }

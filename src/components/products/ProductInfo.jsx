@@ -18,7 +18,7 @@ function ProductInfo({ product }) {
       </>
     );
   } else {
-    priceInfo = <p className="text-xl">{price}</p>;
+    priceInfo = <p className="text-xl">${price}</p>;
   }
 
   return (

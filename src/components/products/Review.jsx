@@ -5,7 +5,7 @@ function Review({ review }) {
 
   return (
     <div>
-      <h3>{username}</h3>
+      <h3 className="text-lg mt-6 font-semibold">{username}</h3>
       <p>Rating: {rating}/5</p>
       <p>{description}</p>
     </div>

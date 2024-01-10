@@ -13,7 +13,7 @@ function Nav() {
               <div className="flex-none mr-2">
                 <Menu horizontal={true} className="px-1">
                   <Menu.Item>
-                    <NavLink to="/contact">Contact</NavLink>
+                    <NavLink to="/contact" className="font-semibold">Contact</NavLink>
                   </Menu.Item>
                   <Menu.Item>
                     <NavCart />

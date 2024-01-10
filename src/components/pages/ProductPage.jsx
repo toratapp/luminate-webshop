@@ -1,8 +1,7 @@
 import { useParams } from "react-router-dom";
-import FirstHeading from "../common/FirstHeading";
 import { url } from "../constants/api";
 import { useEffect, useState } from "react";
-import Review from "../products/Review";
+import ProductInfo from "../products/ProductInfo";
 
 function ProductPage() {
   const [product, setProduct] = useState(null);
@@ -39,29 +38,9 @@ function ProductPage() {
     return <p>Error loading products</p>;
   }
 
-  const { imageUrl, title, discountedPrice, price, reviews } = product;
-
   return (
     <section className="max-w-screen-2xl mx-auto p-4">
-      <div className="grid gap-4 grid-cols-1 sm:grid-cols-2">
-        <img src={imageUrl} alt={title} />
-        <div>
-          <FirstHeading>{title}</FirstHeading>
-          <div>
-            <p>{discountedPrice}</p>
-            <p className="line-through text-gray-800">{price}</p>
-          </div>
-        </div>
-      </div>
-      <div className="product__reviews mt-10 mb-56">
-        {reviews.length > 0 && (
-          <div>
-            {reviews.map((review) => (
-              <Review key={review.id} review={review} />
-            ))}
-          </div>
-        )}
-      </div>
+      <ProductInfo product={product} />
     </section>
   );
 }

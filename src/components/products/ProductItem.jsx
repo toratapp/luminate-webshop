@@ -1,15 +1,15 @@
 import PropTypes from 'prop-types';
 import { Button, Card } from 'react-daisyui';
-import missingImage from '/missing-img.jpg';
+import { Link } from 'react-router-dom';
 
 function ProductItem({ product }) {
-  const { imageUrl, title, description } = product;
+  const { imageUrl, title, description, id } = product;
 
   return (
     <Card>
-      <Card.Image src={imageUrl ? imageUrl : missingImage} alt={imageUrl ? title : "Placeholder image"} />
+      <Link to={`product/${id}`}><Card.Image src={imageUrl} alt={title} /></Link>
       <Card.Body>
-        <Card.Title tag="h2">{title}</Card.Title>
+        <Link to={`product/${id}`}><Card.Title tag="h2">{title}</Card.Title></Link>
         <p>{description}</p>
         <Card.Actions className="justify-end">
           <Button color="primary">Buy</Button>
@@ -26,5 +26,6 @@ ProductItem.propTypes = {
     imageUrl: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
+    id: PropTypes.string.isRequired,
   }).isRequired,
 };

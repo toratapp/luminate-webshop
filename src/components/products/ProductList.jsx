@@ -5,7 +5,7 @@ import ProductItem from "./ProductItem";
 function ProductList() {
   const [products, setProducts] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-  const [isError, setIsError] = useState(null);
+  const [isError, setIsError] = useState(false);
 
   useEffect(() => {
     async function getProducts() {

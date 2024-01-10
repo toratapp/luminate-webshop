@@ -6,6 +6,10 @@ height: 42px;
   margin-bottom: 600px;
 }
 
+.contact__main {
+  min-height: 120vh;
+}
+
 @media (min-width: 768px) {
   .product__reviews, .home__product-cards, .contact__main {
     margin-bottom: 240px;

@@ -40,11 +40,11 @@ function ContactPage() {
     <section className="contact__main">
       <FirstHeading additionalClass="text-center block">Contact us</FirstHeading>
       <div className="flex justify-center">
-        <form className="p-8 w-full" onSubmit={handleSubmit(onSubmit)}>
+        <form className="w-full" onSubmit={handleSubmit(onSubmit)}>
           <div className="flex w-full component-preview p-4 items-center justify-center gap-2 font-sans">
             <div className="form-control w-full max-w-xs items-center">
               <label className="label">
-                <span className="label-text">Full name</span>
+                <span className="label-text">Full name:</span>
               </label>
               <Input as="input" type="text" {...register("fullName")} />
               {errors.fullName && <ErrorMessage>{errors.fullName.message}</ErrorMessage>}
@@ -53,7 +53,7 @@ function ContactPage() {
           <div className="flex w-full component-preview p-4 items-center justify-center gap-2 font-sans">
             <div className="form-control w-full max-w-xs items-center">
               <label className="label">
-                <span className="label-text">Subject</span>
+                <span className="label-text">Subject:</span>
               </label>
               <Input as="input" type="text" {...register("subject")} />
               {errors.subject && <ErrorMessage>{errors.subject.message}</ErrorMessage>}
@@ -62,7 +62,7 @@ function ContactPage() {
           <div className="flex w-full component-preview p-4 items-center justify-center gap-2 font-sans">
             <div className="form-control w-full max-w-xs items-center">
               <label className="label">
-                <span className="label-text">Email</span>
+                <span className="label-text">Email:</span>
               </label>
               <Input as="input" type="email" {...register("email")} />
               {errors.email && <ErrorMessage>{errors.email.message}</ErrorMessage>}
@@ -70,7 +70,7 @@ function ContactPage() {
           </div>
           <div className="flex flex-col w-full component-preview p-4 items-center justify-center gap-2 font-sans">
             <label className="label">
-              <span className="label-text">Your message</span>
+              <span className="label-text">Your message:</span>
             </label>
             <Textarea {...register("contactMessage")} />
             {errors.contactMessage && <ErrorMessage>{errors.contactMessage.message}</ErrorMessage>}

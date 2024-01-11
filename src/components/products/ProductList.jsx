@@ -1,44 +1,7 @@
-import { url } from "../constants/api";
-import { useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
 import ProductItem from "./ProductItem";
 
-function ProductList() {
-  const [products, setProducts] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
-  const [isError, setIsError] = useState(false);
-
-  useEffect(() => {
-    async function getProducts() {
-      try {
-        setIsError(false);
-        setIsLoading(true);
-        const response = await fetch(url);
-
-        if (response.ok) {
-          const json = await response.json();
-          return setProducts(json);
-        }
-
-        throw new Error("Error loading products");        
-      }
-      catch(error) {
-        setIsError(true);
-      }
-      finally {
-        setIsLoading(false);
-      }
-    }
-    getProducts();
-  }, []);
-
-  if (isLoading) {
-    return <p>Loading products...</p>;
-  }
-
-  if (isError) {
-    return <p>Error loading products</p>;
-  }
-
+function ProductList({ products = [] }) {
   return  (
     <div className="home__product-cards grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
       {products.map((product) => (
@@ -49,3 +12,11 @@ function ProductList() {
 }
 
 export default ProductList;
+
+ProductList.propTypes = {
+  products: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+    })
+  ),
+};

@@ -11,7 +11,7 @@ function ProductItem({ product }) {
   if (discountedPrice !== price) {
     priceInfo = (
       <span className="flex items-center">
-        <span className="flex-initial text-lg">${discountedPrice}</span>
+        <span className="flex-initial text-lg text-secondary">${discountedPrice}</span>
         <span className="flex-auto text-sm ml-3">-{roundedDiscount}%</span>
       </span>
     );

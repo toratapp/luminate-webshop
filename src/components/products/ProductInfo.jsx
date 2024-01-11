@@ -12,7 +12,7 @@ function ProductInfo({ product }) {
   if (discountedPrice !== price) {
     priceInfo = (
       <>
-        <p className="text-xl">${discountedPrice}</p>
+        <p className="text-xl text-secondary">${discountedPrice}</p>
         <p className="text-sm">-{roundedDiscount}%</p>
         <p className="text-sm line-through text-gray-600">${price}</p>
       </>

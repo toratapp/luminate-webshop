@@ -1,5 +1,5 @@
 .logo {
-height: 42px;
+height: 34px;
 }
 
 .product__reviews, .home__product-cards, .contact__main {
@@ -7,7 +7,13 @@ height: 42px;
 }
 
 .contact__main {
-  min-height: 120vh;
+  min-height: 1360px;
+}
+
+@media (min-width: 640px) {
+  .logo {
+    height: 42px;
+  }
 }
 
 @media (min-width: 768px) {

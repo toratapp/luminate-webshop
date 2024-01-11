@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 
 function SuccessMessage({ children }) {
   return ( 
-    <p className="text-primary">{children}</p>
+    <p className="text-secondary">{children}</p>
   );
 }
 

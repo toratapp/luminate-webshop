@@ -1,9 +1,11 @@
+import { useState } from 'react';
 import { Button, Input, Textarea } from "react-daisyui";
 import FirstHeading from "../common/FirstHeading";
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import ErrorMessage from "../common/errorMessage";
+import SuccessMessage from "../common/SuccessMessage";
 
 const schema = yup
   .object({
@@ -15,9 +17,12 @@ const schema = yup
   .required();
 
 function ContactPage() {
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm({
     resolver: yupResolver(schema),
@@ -27,6 +32,8 @@ function ContactPage() {
 
   function onSubmit(data) {
     console.log(data);
+    setIsSubmitted(true);
+    reset();
   }
 
   return (
@@ -68,6 +75,9 @@ function ContactPage() {
             <Textarea {...register("contactMessage")} />
             {errors.contactMessage && <ErrorMessage>{errors.contactMessage.message}</ErrorMessage>}
           </div>
+          {isSubmitted && <div className="flex flex-col w-full component-preview items-center justify-center mt-4">
+            <SuccessMessage>Thank you for your message</SuccessMessage>
+          </div>}
           <div className="flex flex-col w-full component-preview items-center justify-center mt-7">
             <Button type="submit" color="primary">Submit</Button>
           </div>

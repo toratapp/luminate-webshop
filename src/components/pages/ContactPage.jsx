@@ -37,7 +37,7 @@ function ContactPage() {
   }
 
   return (
-    <section className="contact__main">
+    <section className="contact__main p-4">
       <FirstHeading additionalClass="text-center block">Contact us</FirstHeading>
       <div className="flex justify-center">
         <form className="w-full" onSubmit={handleSubmit(onSubmit)}>

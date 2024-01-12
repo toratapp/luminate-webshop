@@ -4,10 +4,10 @@ import SecondHeading from "../common/SecondHeading";
 
 function CheckoutSuccessPage() {
   return (
-    <section>
-      <FirstHeading>Thank you for your order!</FirstHeading>
+    <section className="checkout-success__main flex flex-col items-center p-4">
+      <FirstHeading additionalClass="text-center block mb-12">Thank you for your order!</FirstHeading>
       <SecondHeading>Checkout was successful.</SecondHeading>
-      <p>You will receive an email confirmation shortly.</p>
+      <p className="mt-1 mb-20">You will receive an email confirmation shortly.</p>
       <ContinueShoppingButton />
     </section>
   );

@@ -2,7 +2,7 @@
 height: 34px;
 }
 
-.product__reviews, .home__product-cards, .contact__main {
+.product__reviews, .home__product-cards, .contact__main, .cart__main, .checkout-success__main {
   padding-bottom: 600px;
 }
 
@@ -13,7 +13,7 @@ height: 34px;
 }
 
 @media (min-width: 768px) {
-  .product__reviews, .home__product-cards, .contact__main {
+  .product__reviews, .home__product-cards, .contact__main, .cart__main, .checkout-success__main {
     padding-bottom: 280px;
   }
 }

@@ -1,12 +1,14 @@
 import PropTypes from 'prop-types';
 import { Button, Card } from 'react-daisyui';
 import { Link } from 'react-router-dom';
+import { useCartActions } from '../cart/useCartStore';
 
 function ProductItem({ product }) {
   const { imageUrl, title, description, id, discountedPrice, price, } = product;
   const discount = ((price - discountedPrice) / price) * 100;
   const roundedDiscount = discount.toFixed(0);
   let priceInfo;
+  const { addToCart } = useCartActions();
 
   if (discountedPrice !== price) {
     priceInfo = (
@@ -27,7 +29,7 @@ function ProductItem({ product }) {
         <p>{description}</p>
         <p>{priceInfo}</p>
         <Card.Actions className="justify-end">
-          <Button color="primary">Buy</Button>
+          <Button color="primary" onClick={() => addToCart(product)}>Add to cart</Button>
         </Card.Actions>
       </Card.Body>
     </Card>

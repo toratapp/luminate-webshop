@@ -1,21 +1,20 @@
 import { create } from 'zustand';
+import { persist } from "zustand/middleware";
 
 const useCartStore = create(
   persist(
     (set) => ({
-      products: [],
-      actions: {
-        addToCart: (product) => set((state) => ({ products: [...state.products, product] })),
-        clearCart: () => set({ products: [] }),
-      },
+      productsInCart: [],
+      addToCart: (product) => set((state) => ({ productsInCart: [...state.productsInCart, product] })),
+      clearCart: () => set({ productsInCart: [] }),
     }),
     {name: "cart"}
   )
 );
 
 export const useCartActions = () => {
-  const { actions } = useCartStore();
-  return actions;
+  const { addToCart, clearCart } = useCartStore();
+  return { addToCart, clearCart };
 };
 
-export const useProducts = () => useCartStore((state) => state.product);
+export const useProducts = () => useCartStore((state) => state.productsInCart);

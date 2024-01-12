@@ -17,6 +17,11 @@ export default function CartPage() {
     );
   }
 
+  const cartTotalPrice = productsInCartFromStore.reduce(
+    (total, product) => total + product.discountedPrice,
+    0
+  );
+
   return (
     <section className="cart__main p-4">
       <FirstHeading additionalClass="text-center block">Your cart</FirstHeading>
@@ -25,6 +30,9 @@ export default function CartPage() {
           <CartItem key={product.id} product={product} />
         ))}
       </div>
+      <p className="text-center mb-4">
+        Total: ${cartTotalPrice.toFixed(2)}
+      </p>
       <div className="w-24 block mx-auto"><CheckoutButton /></div>
     </section>
   );

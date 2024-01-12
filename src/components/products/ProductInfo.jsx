@@ -3,12 +3,15 @@ import FirstHeading from "../common/FirstHeading";
 import Review from "./Review";
 import PropTypes from 'prop-types';
 import SecondHeading from "../common/SecondHeading";
+import { useCartActions } from '../cart/useCartStore';
 
 function ProductInfo({ product }) {
   const { imageUrl, title, discountedPrice, price, description, reviews } = product;
   let priceInfo;
   const discount = ((price - discountedPrice) / price) * 100;
   const roundedDiscount = discount.toFixed(0);
+  const { addToCart } = useCartActions();
+
   if (discountedPrice !== price) {
     priceInfo = (
       <>
@@ -30,7 +33,7 @@ function ProductInfo({ product }) {
           <div>
             {priceInfo}
             <p className="mt-10">{description}</p>
-            <Button color="primary" className="mt-6">Buy</Button>
+            <Button color="primary" className="mt-6" onClick={() => addToCart(product)}>Add to cart</Button>
           </div>
         </div>
       </div>

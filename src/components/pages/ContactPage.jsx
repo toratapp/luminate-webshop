@@ -37,52 +37,50 @@ function ContactPage() {
   }
 
   return (
-    <section className="contact__main p-4">
-      <FirstHeading additionalClass="text-center block">Contact us</FirstHeading>
-      <div className="flex justify-center">
-        <form className="w-full" onSubmit={handleSubmit(onSubmit)}>
-          <div className="flex w-full component-preview p-4 items-center justify-center gap-2 font-sans">
-            <div className="form-control w-full max-w-xs items-center">
-              <label className="label">
-                <span className="label-text">Full name:</span>
-              </label>
-              <Input as="input" type="text" {...register("fullName")} />
-              {errors.fullName && <ErrorMessage>{errors.fullName.message}</ErrorMessage>}
-            </div>
-          </div>
-          <div className="flex w-full component-preview p-4 items-center justify-center gap-2 font-sans">
-            <div className="form-control w-full max-w-xs items-center">
-              <label className="label">
-                <span className="label-text">Subject:</span>
-              </label>
-              <Input as="input" type="text" {...register("subject")} />
-              {errors.subject && <ErrorMessage>{errors.subject.message}</ErrorMessage>}
-            </div>
-          </div>
-          <div className="flex w-full component-preview p-4 items-center justify-center gap-2 font-sans">
-            <div className="form-control w-full max-w-xs items-center">
-              <label className="label">
-                <span className="label-text">Email:</span>
-              </label>
-              <Input as="input" type="email" {...register("email")} />
-              {errors.email && <ErrorMessage>{errors.email.message}</ErrorMessage>}
-            </div>
-          </div>
-          <div className="flex flex-col w-full component-preview p-4 items-center justify-center gap-2 font-sans">
+    <section className="p-4 flex flex-col max-w-md items-center mx-auto">
+      <FirstHeading>Contact us</FirstHeading>
+      <form className="w-full" onSubmit={handleSubmit(onSubmit)}>
+        <div className="w-full p-4 font-sans">
+          <div className="form-control w-full">
             <label className="label">
-              <span className="label-text">Your message:</span>
+              <span className="label-text">Full name:</span>
             </label>
-            <Textarea {...register("contactMessage")} />
-            {errors.contactMessage && <ErrorMessage>{errors.contactMessage.message}</ErrorMessage>}
+            <Input as="input" type="text" {...register("fullName")} />
+            {errors.fullName && <ErrorMessage>{errors.fullName.message}</ErrorMessage>}
           </div>
-          {isSubmitted && <div className="flex flex-col w-full component-preview items-center justify-center mt-4">
-            <SuccessMessage>Thank you for your message</SuccessMessage>
-          </div>}
-          <div className="flex flex-col w-full component-preview items-center justify-center mt-7">
-            <Button type="submit" color="primary">Submit</Button>
+        </div>
+        <div className="w-full p-4 font-sans">
+          <div className="form-control w-full">
+            <label className="label">
+              <span className="label-text">Subject:</span>
+            </label>
+            <Input as="input" type="text" {...register("subject")} />
+            {errors.subject && <ErrorMessage>{errors.subject.message}</ErrorMessage>}
           </div>
-        </form>
-      </div>
+        </div>
+        <div className="w-full p-4 font-sans">
+          <div className="form-control w-full">
+            <label className="label">
+              <span className="label-text">Email:</span>
+            </label>
+            <Input as="input" type="email" {...register("email")} />
+            {errors.email && <ErrorMessage>{errors.email.message}</ErrorMessage>}
+          </div>
+        </div>
+        <div className="w-full p-4 font-sans">
+          <label className="label">
+            <span className="label-text">Your message:</span>
+          </label>
+          <Textarea className="w-full" {...register("contactMessage")} />
+          {errors.contactMessage && <ErrorMessage>{errors.contactMessage.message}</ErrorMessage>}
+        </div>
+        {isSubmitted && <div className="mt-4">
+          <SuccessMessage>Thank you for your message</SuccessMessage>
+        </div>}
+        <div className="w-80 mt-7 flex flex-col items-center">
+          <Button type="submit" color="primary">Submit</Button>
+        </div>
+      </form>
     </section>
   );
 }

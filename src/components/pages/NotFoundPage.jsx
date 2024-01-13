@@ -7,9 +7,9 @@ function NotFoundPage() {
   const returnHome = () => navigate('/');
 
   return (
-    <section>
+    <section className="flex flex-col items-center p-4 grow">
       <FirstHeading>404 Page not found</FirstHeading>
-      <p>The page you are looking for does not exist or an error occured.</p>
+      <p className="mt-1 mb-20">The page you are looking for does not exist or an error occured.</p>
       <Button color="primary" onClick={returnHome}>Return home</Button>
     </section>
   );

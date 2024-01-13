@@ -9,7 +9,7 @@ export default function CartPage() {
   
   if (!productsInCartFromStore || productsInCartFromStore.length === 0) {
     return (
-      <section className="cart__main p-4 flex flex-col items-center mx-auto max-w-lg">
+      <section className="p-4 flex flex-col items-center mx-auto max-w-lg grow">
         <FirstHeading additionalClass="text-center block">Your cart</FirstHeading>
         <p className="mt-16 mb-10">There are no products in your cart.</p>
         <ContinueShoppingButton />

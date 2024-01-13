@@ -4,7 +4,7 @@ import FooterLayout from "./FooterLayout";
 
 function Layout() {
   return (
-    <div>
+    <div className="flex flex-col min-h-screen">
       <Header />
       <Outlet />
       <FooterLayout />

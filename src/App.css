@@ -2,18 +2,8 @@
 height: 34px;
 }
 
-.product__reviews, .home__product-cards, .contact__main, .cart__main, .checkout-success__main {
-  padding-bottom: 600px;
-}
-
 @media (min-width: 640px) {
   .logo {
     height: 42px;
-  }
-}
-
-@media (min-width: 768px) {
-  .product__reviews, .home__product-cards, .contact__main, .cart__main, .checkout-success__main {
-    padding-bottom: 280px;
   }
 }

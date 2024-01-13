@@ -74,7 +74,7 @@ function ContactPage() {
           <Textarea className="w-full" {...register("contactMessage")} />
           {errors.contactMessage && <ErrorMessage>{errors.contactMessage.message}</ErrorMessage>}
         </div>
-        {isSubmitted && <div className="mt-4">
+        {isSubmitted && <div className="mt-4 text-center">
           <SuccessMessage>Thank you for your message</SuccessMessage>
         </div>}
         <div className="w-80 mt-7 flex flex-col items-center">

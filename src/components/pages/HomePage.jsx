@@ -10,7 +10,7 @@ function HomePage() {
   const { products, isLoading, isError } = useGetProducts(url);
 
   if (isLoading) {
-    return <Loading />;
+    return <Loading className="max-w-screen-2xl mx-auto p-4" />;
   }
 
   if (isError) {

@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import { url } from "../constants/api";
 import { useEffect, useState } from "react";
 import ProductInfo from "../products/ProductInfo";
+import { Loading } from "react-daisyui";
 
 function ProductPage() {
   const [product, setProduct] = useState(null);
@@ -31,7 +32,7 @@ function ProductPage() {
   }, [id]);
 
   if (isLoading || !product) {
-    return <p>Loading products...</p>;
+    return <Loading className="max-w-screen-2xl mx-auto p-4" />;
   }
 
   if (isError) {

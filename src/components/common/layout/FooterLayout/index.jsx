@@ -2,20 +2,20 @@ import { Footer } from "react-daisyui";
 
 function FooterLayout() {
   return (
-    <Footer className="p-10 bg-neutral text-neutral-content max-w-full w-auto">
+    <Footer className="p-10 bg-slate-900 text-neutral-content max-w-full w-auto">
       <div>
-        <Footer.Title>About us</Footer.Title>
-        <p>Branding</p>
-        <p>Design</p>
-        <p>Marketing</p>
-        <p>Advertisement</p>
+        <Footer.Title>Luminate</Footer.Title>
+        <p>Our history</p>
+        <p>Sustainability</p>
+        <p>Our staff</p>
+        <p>Size guide</p>
       </div>
       <div>
-        <Footer.Title>Company</Footer.Title>
-        <p>About us</p>
+        <Footer.Title>Help</Footer.Title>
+        <p>FAQ</p>
         <p>Contact</p>
-        <p>Jobs</p>
-        <p>Press kit</p>
+        <p>Delivery</p>
+        <p>Returns</p>
       </div>
       <div>
         <Footer.Title>Legal</Footer.Title>

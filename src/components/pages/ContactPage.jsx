@@ -67,7 +67,7 @@ function ContactPage() {
             {errors.email && <ErrorMessage>{errors.email.message}</ErrorMessage>}
           </div>
         </div>
-        <div className="w-full p-4 font-sans">
+        <div className="w-full max-w-80 p-4 font-sans">
           <label className="label">
             <span className="label-text">Your message:</span>
           </label>

@@ -2,7 +2,7 @@ import { Footer } from "react-daisyui";
 
 function FooterLayout() {
   return (
-    <Footer className="p-10 bg-neutral text-neutral-content mt-10">
+    <Footer className="p-10 bg-neutral text-neutral-content max-w-full w-auto">
       <div>
         <Footer.Title>About us</Footer.Title>
         <p>Branding</p>

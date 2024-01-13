@@ -37,7 +37,7 @@ function ContactPage() {
   }
 
   return (
-    <section className="p-4 flex flex-col max-w-md items-center mx-auto">
+    <section className="p-4 flex flex-col max-w-md items-center mx-auto mb-12">
       <FirstHeading>Contact us</FirstHeading>
       <form className="w-full" onSubmit={handleSubmit(onSubmit)}>
         <div className="w-full p-4 font-sans">

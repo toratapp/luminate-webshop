@@ -1,9 +1,30 @@
+body {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.wrapper {
+  box-sizing: border-box;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
 .logo {
 height: 34px;
+}
+
+.footer {
+  height: 540px;
 }
 
 @media (min-width: 640px) {
   .logo {
     height: 42px;
+  }
+
+  .footer {
+    height: 220px;
   }
 }

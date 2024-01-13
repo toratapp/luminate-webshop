@@ -5,7 +5,7 @@ import NavCart from "./NavCart";
 
 function Nav() {
   return (    
-    <Navbar className="bg-base-100 mb-14 shadow-xl max-w-screen-2xl mx-auto mt-2">
+    <Navbar className="bg-base-100 mb-14 shadow-xl mx-auto h-20">
       <div className="flex-1">
         <Link to="/">
           <img src={Logo} className="logo p-0.5 ml-2" alt="Logo" />

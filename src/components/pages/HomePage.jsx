@@ -19,7 +19,7 @@ function HomePage() {
 
   return  <section className="max-w-screen-2xl mx-auto p-4">
             <FirstHeading additionalClass="text-center block">Welcome to our webshop!</FirstHeading>
-            <div className="flex gap-5 items-center">
+            <div className="flex flex-col md:flex-row md:gap-5 md:items-center pt-4">
               <SecondHeading>All products</SecondHeading>
               <SearchInput products={products}/>
             </div>

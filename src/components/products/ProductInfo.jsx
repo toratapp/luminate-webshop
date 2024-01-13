@@ -26,7 +26,7 @@ function ProductInfo({ product }) {
 
   return (
     <>
-      <div className="grid gap-4 grid-cols-1 md:grid-cols-2">
+      <div className="grid gap-10 grid-cols-1 md:grid-cols-2">
         <img src={imageUrl} alt={title} />
         <div>
           <FirstHeading>{title}</FirstHeading>

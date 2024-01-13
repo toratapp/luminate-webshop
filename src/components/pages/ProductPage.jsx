@@ -39,7 +39,7 @@ function ProductPage() {
   }
 
   return (
-    <section className="max-w-screen-2xl mx-auto p-4">
+    <section className="max-w-screen-2xl mx-auto p-4 mb-20">
       <ProductInfo product={product} />
     </section>
   );

@@ -36,7 +36,7 @@ function ProductPage() {
   }
 
   if (isError) {
-    return <p>Error loading products</p>;
+    return <p className="max-w-screen-2xl mx-auto p-4">Error loading products.</p>;
   }
 
   return (

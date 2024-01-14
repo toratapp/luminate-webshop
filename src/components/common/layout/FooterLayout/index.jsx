@@ -2,7 +2,7 @@ import { Footer } from "react-daisyui";
 
 function FooterLayout() {
   return (
-    <Footer className="p-10 bg-slate-900 text-neutral-content max-w-full w-auto">
+    <Footer className="p-10 bg-slate-900 text-neutral-content max-w-full w-auto overflow-hidden">
       <div>
         <Footer.Title>Luminate</Footer.Title>
         <p>Our history</p>

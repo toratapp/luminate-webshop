@@ -28,10 +28,9 @@ function ContactPage() {
     resolver: yupResolver(schema),
   });
 
-  console.log(errors);
-
   function onSubmit(data) {
-    console.log(data);
+    const { fullName, subject, email, contactMessage } = data;
+    console.log(`Full name: ${fullName}, Subject: ${subject}, Email: ${email}, Message: ${contactMessage}`);
     setIsSubmitted(true);
     reset();
   }

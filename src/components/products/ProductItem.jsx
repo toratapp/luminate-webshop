@@ -21,7 +21,7 @@ function ProductItem({ product }) {
 
   return (
     <Card>
-      <Link to={`product/${id}`}><Card.Image src={imageUrl} alt={title} /></Link>
+      <Link to={`product/${id}`}><figure><img className="aspect-5/4 w-full h-auto object-cover" src={imageUrl} alt={title} /></figure></Link>
       <Card.Body>
         <Link to={`product/${id}`}><Card.Title tag="h2">{title}</Card.Title></Link>
         <p>{description}</p>

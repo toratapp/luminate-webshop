@@ -7,7 +7,11 @@ module.exports = {
     "node_modules/react-daisyui/dist/**/*.js",
   ],
   theme: {
-    extend: {},
+    extend: {
+      aspectRatio: {
+        '5/4': '5 / 4',
+      },
+    },
   },  
   plugins: [require('daisyui')],
   daisyui: {
